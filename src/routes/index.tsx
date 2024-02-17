@@ -13,6 +13,7 @@ import WrapperRouteComponent from './config';
 
 const NotFound = lazy(() => import(/* webpackChunkName: "404'"*/ '@/pages/404'));
 const Documentation = lazy(() => import(/* webpackChunkName: "404'"*/ '@/pages/doucumentation'));
+const GeographyPage = lazy(() => import(/* webpackChunkName: "geo'"*/ '@/pages/geography'))
 const Guide = lazy(() => import(/* webpackChunkName: "guide'"*/ '@/pages/guide'));
 const RoutePermission = lazy(() => import(/* webpackChunkName: "route-permission"*/ '@/pages/permission/route'));
 const FormPage = lazy(() => import(/* webpackChunkName: "form'"*/ '@/pages/components/form'));
@@ -49,6 +50,10 @@ const routeList: RouteObject[] = [
       {
         path: 'documentation',
         element: <WrapperRouteComponent element={<Documentation />} titleId="title.documentation" />,
+      },
+      {
+        path: 'geography',
+        element: <WrapperRouteComponent element={<GeographyPage />} titleId="title.geography" />,
       },
       {
         path: 'guide',
@@ -110,6 +115,7 @@ const routeList: RouteObject[] = [
   },
 ];
 
+// 路由渲染器 -- 渲染组件 
 const RenderRouter: FC = () => {
   const element = useRoutes(routeList);
 

@@ -21,7 +21,6 @@ const globalSlice = createSlice({
   reducers: {
     setGlobalState(state, action: PayloadAction<Partial<State>>) {
       Object.assign(state, action.payload);
-
       if (action.payload.theme) {
         const body = document.body;
 

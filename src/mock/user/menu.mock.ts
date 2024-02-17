@@ -22,6 +22,15 @@ const mockMenuList: MenuList = [
     path: '/documentation',
   },
   {
+    code: 'geography',
+    label: {
+      zh_CN: '地理',
+      en_US: 'Geography',
+    },
+    icon: 'geography',
+    path: '/geography',
+  },
+  {
     code: 'guide',
     label: {
       zh_CN: '引导',

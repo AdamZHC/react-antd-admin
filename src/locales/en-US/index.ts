@@ -9,6 +9,7 @@ import { enUS_permissionRole } from './permission/role';
 import { enUS_avatorDropMenu } from './user/avatorDropMenu';
 import { enUS_tagsViewDropMenu } from './user/tagsViewDropMenu';
 import { enUS_title } from './user/title';
+import { en_US_geography } from './geography/index';
 
 const en_US = {
   ...enUS_account,
@@ -22,6 +23,7 @@ const en_US = {
   ...en_US_documentation,
   ...enUS_notice,
   ...en_US_component,
+  ...en_US_geography,
 };
 
 export default en_US;
