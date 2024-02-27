@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 import './index.less';
 
-import { Drawer, Layout, theme as antTheme } from 'antd';
+import { Drawer, Layout, theme as antTheme, Flex } from 'antd';
 import { Suspense, useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Outlet, useLocation } from 'react-router';
@@ -141,9 +141,11 @@ const LayoutPage: FC = () => {
           </Drawer>
         )}
         <Content className="layout-page-content">
-          <TagsView />
+          <div>
+            <br/>
+          </div>
           <Suspense fallback={null}>
-            <Outlet />
+            <Outlet/>
           </Suspense>
         </Content>
       </Layout>
